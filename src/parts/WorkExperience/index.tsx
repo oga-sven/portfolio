@@ -1,6 +1,30 @@
 import CompanyName from '@/components/WorkExperience/CompanyName';
-import React, { useState } from 'react';
+import React, { JSX, useState } from 'react';
 import Details from './Details';
+
+const experiences: WorkExperienceData[] = [
+  {
+    id: 'cak',
+    companyName: 'CAK Groep',
+    role: 'Backend Developer',
+    duration: '2024-Huidig',
+    logo: '/images/work-experience/cak-small.jpg',
+  },
+  {
+    id: 'tbc',
+    companyName: 'Team Bicep',
+    role: 'Eigenaar / Developer',
+    duration: '2019-Huidig',
+    logo: '/images/work-experience/team-bicep-small.png',
+  },
+  {
+    id: 'eqp',
+    companyName: 'Equippo AG',
+    role: 'Full Stack Developer',
+    duration: '2020-2024',
+    logo: '/images/work-experience/equippo-small.jpg',
+  },
+];
 
 export interface WorkExperienceData {
   id: 'eqp' | 'cak' | 'tbc';
@@ -11,11 +35,7 @@ export interface WorkExperienceData {
   link?: string;
 }
 
-interface WorkExperiencePageProps {
-  experiences: WorkExperienceData[];
-}
-
-const WorkExperiencePage: React.FC<WorkExperiencePageProps> = ({ experiences }) => {
+export function WorkExperiencePage(): JSX.Element {
   const [selectedExperienceID, setSelectedExperienceId] = useState<string | null>(null);
 
   const selectedExperience =
@@ -41,6 +61,6 @@ const WorkExperiencePage: React.FC<WorkExperiencePageProps> = ({ experiences }) 
       <Details selectedExperience={selectedExperience} />
     </div>
   );
-};
+}
 
 export default WorkExperiencePage;

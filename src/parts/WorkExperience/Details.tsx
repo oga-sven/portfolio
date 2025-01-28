@@ -1,6 +1,8 @@
 import React, { JSX } from 'react';
 import { WorkExperienceData } from '.';
 import CAK from '@/components/WorkExperience/Descriptions/CAK';
+import EQP from '@/components/WorkExperience/Descriptions/EQP';
+import TBC from '@/components/WorkExperience/Descriptions/TBC';
 
 interface IDetailsProps {
   selectedExperience: WorkExperienceData;
@@ -12,7 +14,9 @@ export default function Details({ selectedExperience }: IDetailsProps): JSX.Elem
       case 'cak':
         return <CAK />;
       case 'eqp':
-        return <CAK />;
+        return <EQP />;
+      case 'tbc':
+        return <TBC />;
 
       default:
         return null;
@@ -26,7 +30,7 @@ export default function Details({ selectedExperience }: IDetailsProps): JSX.Elem
           <h2 className='text-2xl md:text-3xl font-bold mb-4'>{selectedExperience.companyName}</h2>
           <p className='text-twilight-200 font-medium text-lg mb-2'>{selectedExperience.role}</p>
           <p className='text-gray-400 text-sm mb-6'>{selectedExperience.duration}</p>
-          <p className='mb-6'>{description()}</p>
+          <div className='mb-6'>{description()}</div>
           {selectedExperience.link && (
             <a
               href={selectedExperience.link}

@@ -3,10 +3,10 @@ import React, { JSX } from 'react';
 
 export default function About(): JSX.Element {
   return (
-    <section id='about' className='py-20 bg-twilight-900 px-10'>
+    <section id='about' className='py-12 bg-twilight-900 px-10'>
       <h2 className='text-3xl font-bold mb-8'>Over Mij:</h2>
-      <div className='flex gap-4'>
-        <div className='max-w-4xl mx-auto flex gap-2 flex-col'>
+      <div className='flex gap-4 md:flex-row flex-col-reverse'>
+        <div className='max-w-4xl flex gap-2 flex-col 2xl:max-w-max'>
           <p>
             Ik zie mezelf als een enthousiaste en creatieve ontwikkelaar, die goed weet hoe hij zijn
             energie en enthousiasme op de juiste manier inzet. Door mijn ervaring heb ik geleerd
@@ -53,7 +53,7 @@ export default function About(): JSX.Element {
             ik er dus wel ervaring mee, en zoniet? Dan sta ik ook 100% open om het te leren!
           </p>
         </div>
-        <aside>
+        <aside className='md:min-w-60 ml-auto 2xl:min-w-[512px]'>
           <Image
             src={'/images/headshot/1.jpg'}
             height={512}
