@@ -82,7 +82,6 @@ export default function Skills() {
   const filteredSkills = skills.filter((skill) => skill.category === selectedCategory);
 
   return (
-    // <div className='bg-twilight-900 text-white p-6 rounded-lg shadow-md m-4'>
     <div className='bg-twilight-900 text-white p-10'>
       <h2 className='text-2xl font-bold mb-4'>Skills</h2>
 
