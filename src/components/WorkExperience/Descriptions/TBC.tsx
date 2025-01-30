@@ -10,7 +10,7 @@ export default function TBC() {
         oplossingen, volledig vanuit mijn eigen creativiteit en interesse.
       </p>
       <p>
-        In 2023 breidde ik mijn activiteiten uit naar e-commerce. Momenteel verkoop ik whitelabelen
+        In 2023 breidde ik mijn activiteiten uit naar e-commerce. Momenteel verkoop ik whitelabel
         branded producten via bol.com, waarbij ik continu werk aan het automatiseren van verkoop- en
         voorraadprocessen. Daarnaast heb ik voor mijn merk zowel een landingspagina als een eigen
         webshop ontworpen en gebouwd, waarbij ik gebruik maakte van mijn full-stack expertise.
