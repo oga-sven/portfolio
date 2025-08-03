@@ -44,7 +44,7 @@ export default function Contact() {
   };
 
   return (
-    <section id='contact' className='py-20 px-10'>
+    <section id='contact' className='py-20 px-10 bg-twilight-50 dark:bg-twilight-900 transition-colors'>
       <h2 className='text-3xl font-bold text-center mb-8'>{t('title')}</h2>
 
       {success ? (

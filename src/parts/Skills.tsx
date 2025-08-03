@@ -109,8 +109,8 @@ export default function Skills() {
             onClick={() => setSelectedCategoryId(categoryId)}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
               selectedCategoryId === categoryId
-                ? 'bg-light-primary dark:bg-twilight-700 text-white'
-                : 'bg-light-border dark:bg-gray-800 text-light-foreground/70 dark:text-gray-400 hover:bg-light-muted dark:hover:bg-twilight-800'
+                ? 'bg-light-primary dark:bg-twilight-700 text-twilight-50'
+                : 'bg-light-border dark:bg-twilight-800 text-light-foreground/70 dark:text-twilight-300 hover:bg-light-muted dark:hover:bg-twilight-800'
             }`}
           >
             {t(`categories.${categoryId}`)}
@@ -123,7 +123,7 @@ export default function Skills() {
         {filteredSkills.map((skill) => (
           <div
             key={skill.name}
-            className='bg-white dark:bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center text-sm font-medium hover:bg-light-muted dark:hover:bg-twilight-700 border border-light-border dark:border-transparent transition-colors'
+            className='bg-twilight-50 dark:bg-twilight-800 p-4 rounded-lg flex flex-col items-center justify-center text-center text-sm font-medium hover:bg-light-muted dark:hover:bg-twilight-700 border border-light-border dark:border-transparent transition-colors'
           >
             <p>{skill.name}</p>
           </div>

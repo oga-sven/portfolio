@@ -24,29 +24,29 @@ export default {
           900: '#000B24',
           950: '#00050F',
         },
-        // Light mode variants
+        // Light mode variants using twilight theme
         light: {
-          background: '#ffffff',
-          foreground: '#171717',
-          muted: '#f5f5f5',
-          border: '#e5e5e5',
-          accent: '#004EF5',
-          primary: '#004EF5',    // twilight-400
-          secondary: '#0037B0',  // twilight-500
-          tertiary: '#7AA4FF',   // twilight-200
-          hover: '#3877FF',      // twilight-300
+          background: '#DBE7FF',  // twilight-50
+          foreground: '#00226B',  // twilight-700
+          muted: '#BDD2FF',       // twilight-100
+          border: '#7AA4FF',      // twilight-200
+          accent: '#004EF5',      // twilight-400
+          primary: '#004EF5',     // twilight-400
+          secondary: '#0037B0',   // twilight-500
+          tertiary: '#7AA4FF',    // twilight-200
+          hover: '#3877FF',       // twilight-300
         },
-        // Dark mode variants
+        // Dark mode variants using twilight theme
         dark: {
-          background: '#0a0a0a',
-          foreground: '#ededed',
-          muted: '#1a1a1a',
-          border: '#2a2a2a',
-          accent: '#3877FF',
-          primary: '#3877FF',    // twilight-300
-          secondary: '#004EF5',  // twilight-400
-          tertiary: '#BDD2FF',   // twilight-100
-          hover: '#7AA4FF',      // twilight-200
+          background: '#00050F',  // twilight-950
+          foreground: '#BDD2FF',  // twilight-100
+          muted: '#001747',       // twilight-800
+          border: '#00226B',      // twilight-700
+          accent: '#3877FF',      // twilight-300
+          primary: '#3877FF',     // twilight-300
+          secondary: '#004EF5',   // twilight-400
+          tertiary: '#BDD2FF',    // twilight-100
+          hover: '#7AA4FF',       // twilight-200
         },
       },
     },

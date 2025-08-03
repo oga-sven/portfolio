@@ -47,7 +47,7 @@ export default function Projects(): JSX.Element {
         {projects.map(({ id, fileName, link, tags }) => (
           <div
             key={fileName}
-            className='bg-white dark:bg-twilight-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col border border-light-border dark:border-transparent'
+            className='bg-twilight-50 dark:bg-twilight-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col border border-light-border dark:border-transparent'
           >
             <Image
               width={1080 / 3}
@@ -68,7 +68,7 @@ export default function Projects(): JSX.Element {
                     {tags.map((tag) => (
                       <span
                         key={tag}
-                        className='bg-light-muted dark:bg-gray-700 text-light-foreground/70 dark:text-gray-300 text-xs font-medium px-2 py-1 rounded-full transition-colors'
+                        className='bg-light-muted dark:bg-twilight-700 text-light-foreground/70 dark:text-twilight-200 text-xs font-medium px-2 py-1 rounded-full transition-colors'
                       >
                         {tag}
                       </span>
