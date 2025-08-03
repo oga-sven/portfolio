@@ -5,6 +5,7 @@ import Button from '@/components/general/Button';
 import LoadingSpinner from '@/components/general/LoadingSpinner';
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 type TContactMeInputs = {
   name: string;
@@ -13,6 +14,7 @@ type TContactMeInputs = {
 };
 
 export default function Contact() {
+  const t = useTranslations('contact');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -33,8 +35,8 @@ export default function Contact() {
     } catch (err: any) {
       setError(
         err.response?.data?.error
-          ? `Oeps! iets ging mis aan de achterkant: ${err.response?.data?.error}`
-          : 'Oeps! Er is een onbekende fout opgetreden.',
+          ? `${t('errorPrefix')} ${err.response?.data?.error}`
+          : t('genericError'),
       );
     } finally {
       setLoading(false);
@@ -43,11 +45,11 @@ export default function Contact() {
 
   return (
     <section id='contact' className='py-20 px-10'>
-      <h2 className='text-3xl font-bold text-center mb-8'>Contactformulier</h2>
+      <h2 className='text-3xl font-bold text-center mb-8'>{t('title')}</h2>
 
       {success ? (
         <p className='text-center text-green-600 text-lg'>
-          Bedankt voor uw bericht! Wij nemen zo snel mogelijk contact met u op.
+          {t('successMessage')}
         </p>
       ) : (
         <form className='max-w-2xl mx-auto space-y-6' onSubmit={handleSubmit(onSubmit)}>
@@ -59,33 +61,33 @@ export default function Contact() {
           {!loading && (
             <>
               <TextField
-                placeholder='Naam'
-                {...register('name', { required: 'Vul aub uw naam in.' })}
+                placeholder={t('nameLabel')}
+                {...register('name', { required: t('nameError') })}
               />
               {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
 
               <TextField
-                placeholder='E-mailadres'
+                placeholder={t('emailLabel')}
                 {...register('email', {
-                  required: 'Vul aub uw e-mailadres in.',
+                  required: t('emailError'),
                   pattern: {
                     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: 'Vul aub een geldig e-mailadres in.',
+                    message: t('emailFormatError'),
                   },
                 })}
               />
               {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
 
               <TextArea
-                placeholder='Bericht'
+                placeholder={t('messageLabel')}
                 rows={5}
-                {...register('message', { required: 'Voeg aub een bericht toe.' })}
+                {...register('message', { required: t('messageError') })}
               />
               {errors.message && <p className='text-red-500'>{errors.message.message}</p>}
 
               {error && <p className='text-red-500'>{error}</p>}
 
-              <Button type='submit'>Versturen</Button>
+              <Button type='submit'>{t('submitButton')}</Button>
             </>
           )}
         </form>

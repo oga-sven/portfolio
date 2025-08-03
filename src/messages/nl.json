@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "greeting": "Hi, Ik ben Sven",
+    "description": "Een {age} jarige software ontwikkelaar uit Dordrecht"
+  },
+  "about": {
+    "title": "Over Mij:",
+    "paragraph1": "Ik zie mezelf als een enthousiaste en creatieve ontwikkelaar, die goed weet hoe hij zijn energie en enthousiasme op de juiste manier inzet. Door mijn ervaring heb ik geleerd prioriteiten te stellen en die kennis pas ik dagelijks toe in mijn technische projecten. Naast mijn (al zeg ik het zelf) gezellige karakter, weet ik een goede balans te vinden tussen socialiseren met collega's, communiceren met de directie of product owner, en het ontwikkelen en uitvoeren van mijn werk.",
+    "paragraph2": "Perfect ben ik natuurlijk niet (wie wel?), maar dat is precies wat me drijft: een sterke drang naar zelfontwikkeling en groei. Dat geldt vooral binnen het technische vlak, maar ik schrik niet om af en toe een stapje buiten mijn comfortzone te zetten.",
+    "technicalTitle": "Technisch gezien?",
+    "paragraph3": "Software ontwikkelen voelt voor mij als het oplossen van een puzzel: \"Hoe kan het nog veiliger, sneller en efficiënter?\" Ik hecht veel waarde aan code die leesbaar en onderhoudbaar is. Clean code is voor mij geen optie, maar een standaard. En uiteraard hoort daar het schrijven van unit, functionele en integratietests bij, zodat alles werkt zoals het hoort.",
+    "paragraph4": "Naast mijn passie voor software ben ik ook graag bezig met Linux, DevOps, hardwareprojectjes en andere technische uitdagingen. Kortom, ik zit nooit stil en vind het geweldig om nieuwe dingen te ontdekken. Enthousiasme heb ik meer dan genoeg!",
+    "specificTitle": "Dan iets specifieker..",
+    "paragraph5": "Voornamelijk heb ik ervaring in het programmeren in Nodejs, Php, en rails. Ook heb veel gedaan in python maar nog niet in een groot project. In NodeJS heb ik voornamelijk gewerkt in NextJS. Hier heb ik bij vorige bedrijven en met mijn eigen bedrijven veel projecten in ontwikkeld. Voor NextJS en React in het algemeen heb ik ook een hele grote liefde en wil er zeker verder mee werken in de toekomst. Ook heb ik gewerkt met Angular voor het maken van een mobiele app (PWA). Deze projecten hebben altijd typescript gedraaid.",
+    "paragraph6": "In PHP Heb ik ervaring in Laravel, Symfony, CodeIgniter, en een aantal projecten met een homebuild framework. Het meeste ervaring van deze heb ik in Symfony. En voor Ruby on Rails heb ik ook in meerdere projecten ontwikkeld. Heel misschien kan het zijn dat net de programmeertaal die je zoekt niet hier tussen staat. Om het natuurlijk geen biografie te maken heb ik niet elke taal, subtaal, library, of methodie hier opgezet. Mogelijk heb ik er dus wel ervaring mee, en zoniet? Dan sta ik ook 100% open om het te leren!"
+  },
+  "languageSwitcher": {
+    "nl": "NL",
+    "en": "EN"
+  },
+  "contact": {
+    "title": "Contactformulier",
+    "successMessage": "Bedankt voor uw bericht! Wij nemen zo snel mogelijk contact met u op.",
+    "errorPrefix": "Oeps! iets ging mis aan de achterkant:",
+    "genericError": "Oeps! Er is een onbekende fout opgetreden.",
+    "nameLabel": "Naam",
+    "nameError": "Vul aub uw naam in.",
+    "emailLabel": "E-mailadres",
+    "emailError": "Vul aub uw e-mailadres in.",
+    "emailFormatError": "Vul aub een geldig e-mailadres in.",
+    "messageLabel": "Bericht",
+    "messageError": "Voeg aub een bericht toe.",
+    "submitButton": "Versturen"
+  },
+  "projects": {
+    "title": "Projecten",
+    "viewProject": "Bekijk Project",
+    "projectImageAlt": "Project",
+    "teamBicepHome": {
+      "name": "Team Bicep Home",
+      "description": "Team Bicep Home is de landingspagina van mijn merk Team Bicep. Hier introduceer ik het merk en presenteer ik informatie over de productenlijn. Daarnaast bevat de website blogs met artikelen en zelfgebouwde fitnessgerelateerde rekenmachines."
+    },
+    "teamBicepShop": {
+      "name": "Team Bicep Shop",
+      "description": "Team Bicep Shop is mijn zelfontwikkelde webshopoplossing voor de producten van Team Bicep. Het project begon als concept in Next.js en heeft een lange tijd live gestaan en verkopen gerealiseerd. Net als bij de meeste webshops bevat deze een persoonlijk profiel, bestelgeschiedenis, kortingsoverzicht en tal van andere functionaliteiten die bij een professionele shop horen."
+    },
+    "superbackend": {
+      "name": "Superbackend",
+      "description": "Superbackend is een interne tool die ik heb ontwikkeld als een eerste versie om Bol.com en andere e-commerce processen te automatiseren. Het omvat functies zoals productonderzoek, financiële berekeningen, SEO-optimalisatie (zowel voor Google als Bol), AI-tools voor het optimaliseren van productbeschrijvingen en een breed scala aan andere tools."
+    },
+    "portfolio": {
+      "name": "Portfolio",
+      "description": "De pagina waar je nu naar kijkt! Mijn portfolio (inmiddels versie 3!) is een visuele representatie van mijn technische vaardigheden. Daarnaast gebruik ik het als experimenteerplek om te werken met verschillende code-standaarden. En natuurlijk is alles open source!"
+    }
+  },
+  "skills": {
+    "title": "Vaardigheden",
+    "categories": {
+      "programmingLanguages": "Programmeertalen",
+      "nodeEcosystem": "Node.js Ecosysteem",
+      "phpSymfony": "PHP/Symfony",
+      "rubyOnRails": "Ruby on Rails",
+      "devOpsTools": "DevOps/Tools",
+      "databases": "Databases",
+      "testingQA": "Testing/QA",
+      "ideCodeQuality": "IDE/Code Kwaliteit",
+      "otherSkills": "Overige Vaardigheden"
+    }
+  },
+  "workExperience": {
+    "title": "Werkervaring",
+    "visitWebsite": "Bezoek Bedrijfswebsite",
+    "selectCompany": "Selecteer een bedrijf om details te zien.",
+    "companyLogoAlt": "{companyName} Logo",
+    "companies": {
+      "cak": {
+        "name": "CAK Groep",
+        "role": "Backend Developer",
+        "duration": "2024-Huidig",
+        "description": {
+          "paragraph1": "Bij CAK Groep heb ik meegewerkt aan de ontwikkeling en optimalisatie van applicaties binnen de verzekeringsbranche. Ik werkte onder andere aan systemen voor de merken Promovendum, Besured, National Academic en Academica. Mijn werk concentreerde zich voornamelijk op backend-ontwikkeling in Symfony, waarbij ik nieuwe functionaliteiten bouwde, bestaande systemen verbeterde en ervoor zorgde dat de applicaties efficiënt en schaalbaar bleven.",
+          "paragraph2": "In een teamsetting, waar we de Kanban-methode hanteerden, hield ik me bezig met:",
+          "listItems": {
+            "item1": "Het analyseren en oplossen van complexe technische vraagstukken.",
+            "item2": "Samenwerken met collega-ontwikkelaars om hoogwaardige code te leveren.",
+            "item3": "Het implementeren van nieuwe features en onderhoud van bestaande applicaties.",
+            "item4": "Het communiceren met stakeholders om technische oplossingen te vertalen naar bedrijfsbehoeften."
+          },
+          "paragraph3": "Door deze ervaring heb ik niet alleen mijn Symfony-vaardigheden verder ontwikkeld, maar ook geleerd hoe ik binnen een agile-omgeving met korte lijnen effectief kan werken."
+        }
+      },
+      "tbc": {
+        "name": "Team Bicep",
+        "role": "Eigenaar / Developer",
+        "duration": "2019-Huidig",
+        "description": {
+          "paragraph1": "Met Team Bicep heb ik mijn passie voor technologie en ondernemerschap gecombineerd. Het begon als een platform om mijn hobby projecten te realiseren, met een sterke focus op software ontwikkeling. In de eerste jaren werkte ik aan diverse applicaties en technische oplossingen, volledig vanuit mijn eigen creativiteit en interesse.",
+          "paragraph2": "In 2023 breidde ik mijn activiteiten uit naar e-commerce. Momenteel verkoop ik whitelabel branded producten via bol.com, waarbij ik continu werk aan het automatiseren van verkoop- en voorraadprocessen. Daarnaast heb ik voor mijn merk zowel een landingspagina als een eigen webshop ontworpen en gebouwd, waarbij ik gebruik maakte van mijn full-stack expertise.",
+          "paragraph3": "De algemene werkzaamheden hiervan zijn onder andere:",
+          "listItems": {
+            "item1": "Ontwikkeling en onderhoud van meerdere applicaties en weboplossingen.",
+            "item2": "Zelfstandig beheren van een e-commerce operatie, inclusief productselectie, branding en procesautomatisering.",
+            "item3": "Implementatie van eigen software om dagelijkse taken efficiënter te maken."
+          },
+          "paragraph4": "Met dit bedrijf combineer ik mijn technische vaardigheden met ondernemerschap, waardoor ik constant leer en groei op beide vlakken."
+        }
+      },
+      "eqp": {
+        "name": "Equippo AG",
+        "role": "Full Stack Developer",
+        "duration": "2020-2024",
+        "description": {
+          "paragraph1": "Bij Equippo, een Zwitserse marktplaats voor tweedehands bouwmachines, werkte ik aan hun webshop/sales applicatie. Omdat we naast de verkoop ook transport- en importdiensten aanboden, was het proces een stuk uitgebreider dan bij een standaard webshop.",
+          "paragraph2": "Ik begon met het verbeteren en onderhouden van hun Ruby on Rails-monolith. Later hebben we het platform omgebouwd naar een moderne setup met een GraphQL API, waarbij Next.js de frontend verzorgde en Rails de backend bleef. We werkten in een team volgens de agile/scrum-methode en richtten ons op iteratieve verbeteringen en schaalbaarheid."
+        }
+      }
+    }
+  },
+  "common": {
+    "loading": "Laden..."
+  }
+}

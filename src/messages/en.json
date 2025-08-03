@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm Sven",
+    "description": "A {age} year old software developer from Dordrecht"
+  },
+  "about": {
+    "title": "About Me:",
+    "paragraph1": "I see myself as an enthusiastic and creative developer who knows how to channel his energy and enthusiasm in the right way. Through my experience, I've learned to set priorities and I apply that knowledge daily in my technical projects. Besides my (if I may say so myself) sociable character, I know how to find a good balance between socializing with colleagues, communicating with management or product owners, and developing and executing my work.",
+    "paragraph2": "I'm not perfect of course (who is?), but that's exactly what drives me: a strong desire for self-development and growth. This applies especially in the technical field, but I'm not afraid to occasionally step outside my comfort zone.",
+    "technicalTitle": "Technically speaking?",
+    "paragraph3": "Developing software feels like solving a puzzle to me: \"How can it be safer, faster, and more efficient?\" I value code that is readable and maintainable. Clean code is not an option for me, but a standard. And of course, that includes writing unit, functional, and integration tests to ensure everything works as it should.",
+    "paragraph4": "Besides my passion for software, I also enjoy working with Linux, DevOps, hardware projects, and other technical challenges. In short, I never sit still and love discovering new things. I have more than enough enthusiasm!",
+    "specificTitle": "More specifically...",
+    "paragraph5": "I primarily have experience programming in NodeJS, PHP, and Rails. I've also done a lot in Python but not yet in a large project. In NodeJS, I've mainly worked with NextJS. I've developed many projects with it at previous companies and with my own businesses. I have a great love for NextJS and React in general and definitely want to continue working with them in the future. I've also worked with Angular to create a mobile app (PWA). These projects have always used TypeScript.",
+    "paragraph6": "In PHP, I have experience with Laravel, Symfony, CodeIgniter, and several projects with a homebuild framework. I have the most experience with Symfony. And for Ruby on Rails, I've also developed in multiple projects. It's possible that the programming language you're looking for isn't listed here. To keep this from becoming a biography, I haven't listed every language, sub-language, library, or methodology here. So I might have experience with it, and if not? Then I'm also 100% open to learning it!"
+  },
+  "languageSwitcher": {
+    "nl": "NL",
+    "en": "EN"
+  },
+  "contact": {
+    "title": "Contact Form",
+    "successMessage": "Thank you for your message! We will contact you as soon as possible.",
+    "errorPrefix": "Oops! Something went wrong on the backend:",
+    "genericError": "Oops! An unknown error occurred.",
+    "nameLabel": "Name",
+    "nameError": "Please enter your name.",
+    "emailLabel": "Email address",
+    "emailError": "Please enter your email address.",
+    "emailFormatError": "Please enter a valid email address.",
+    "messageLabel": "Message",
+    "messageError": "Please add a message.",
+    "submitButton": "Submit"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewProject": "View Project",
+    "projectImageAlt": "Project",
+    "teamBicepHome": {
+      "name": "Team Bicep Home",
+      "description": "Team Bicep Home is the landing page for my brand Team Bicep. Here I introduce the brand and present information about the product line. The website also contains blogs with articles and self-built fitness-related calculators."
+    },
+    "teamBicepShop": {
+      "name": "Team Bicep Shop",
+      "description": "Team Bicep Shop is my self-developed webshop solution for Team Bicep products. The project started as a concept in Next.js and has been live for a long time, generating sales. Like most webshops, it includes a personal profile, order history, discount overview, and many other features that belong to a professional shop."
+    },
+    "superbackend": {
+      "name": "Superbackend",
+      "description": "Superbackend is an internal tool I developed as a first version to automate Bol.com and other e-commerce processes. It includes features such as product research, financial calculations, SEO optimization (for both Google and Bol), AI tools for optimizing product descriptions, and a wide range of other tools."
+    },
+    "portfolio": {
+      "name": "Portfolio",
+      "description": "The page you're looking at right now! My portfolio (now version 3!) is a visual representation of my technical skills. I also use it as an experimental place to work with different code standards. And of course, everything is open source!"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "programmingLanguages": "Programming Languages",
+      "nodeEcosystem": "Node.js Ecosystem",
+      "phpSymfony": "PHP/Symfony",
+      "rubyOnRails": "Ruby on Rails",
+      "devOpsTools": "DevOps/Tools",
+      "databases": "Databases",
+      "testingQA": "Testing/QA",
+      "ideCodeQuality": "IDE/Code Quality",
+      "otherSkills": "Other Skills"
+    }
+  },
+  "workExperience": {
+    "title": "Work Experience",
+    "visitWebsite": "Visit Company Website",
+    "selectCompany": "Select a company to see details.",
+    "companyLogoAlt": "{companyName} Logo",
+    "companies": {
+      "cak": {
+        "name": "CAK Groep",
+        "role": "Backend Developer",
+        "duration": "2024-Present",
+        "description": {
+          "paragraph1": "At CAK Groep, I contributed to the development and optimization of applications within the insurance industry. I worked on systems for brands including Promovendum, Besured, National Academic, and Academica. My work primarily focused on backend development in Symfony, where I built new functionalities, improved existing systems, and ensured that applications remained efficient and scalable.",
+          "paragraph2": "In a team setting, where we used the Kanban method, I was involved in:",
+          "listItems": {
+            "item1": "Analyzing and solving complex technical issues.",
+            "item2": "Collaborating with fellow developers to deliver high-quality code.",
+            "item3": "Implementing new features and maintaining existing applications.",
+            "item4": "Communicating with stakeholders to translate technical solutions to business needs."
+          },
+          "paragraph3": "Through this experience, I not only further developed my Symfony skills but also learned how to work effectively in an agile environment with short lines of communication."
+        }
+      },
+      "tbc": {
+        "name": "Team Bicep",
+        "role": "Owner / Developer",
+        "duration": "2019-Present",
+        "description": {
+          "paragraph1": "With Team Bicep, I combined my passion for technology and entrepreneurship. It started as a platform to realize my hobby projects, with a strong focus on software development. In the early years, I worked on various applications and technical solutions, entirely from my own creativity and interest.",
+          "paragraph2": "In 2023, I expanded my activities to e-commerce. Currently, I sell white-label branded products via bol.com, continuously working on automating sales and inventory processes. Additionally, I designed and built both a landing page and a webshop for my brand, utilizing my full-stack expertise.",
+          "paragraph3": "The general activities include:",
+          "listItems": {
+            "item1": "Development and maintenance of multiple applications and web solutions.",
+            "item2": "Independently managing an e-commerce operation, including product selection, branding, and process automation.",
+            "item3": "Implementation of custom software to make daily tasks more efficient."
+          },
+          "paragraph4": "With this company, I combine my technical skills with entrepreneurship, allowing me to constantly learn and grow in both areas."
+        }
+      },
+      "eqp": {
+        "name": "Equippo AG",
+        "role": "Full Stack Developer",
+        "duration": "2020-2024",
+        "description": {
+          "paragraph1": "At Equippo, a Swiss marketplace for used construction machinery, I worked on their webshop/sales application. Because we offered transport and import services in addition to sales, the process was much more extensive than a standard webshop.",
+          "paragraph2": "I started by improving and maintaining their Ruby on Rails monolith. Later, we rebuilt the platform into a modern setup with a GraphQL API, where Next.js handled the frontend while Rails remained the backend. We worked in a team following the agile/scrum method and focused on iterative improvements and scalability."
+        }
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading..."
+  }
+}

@@ -1,6 +1,7 @@
 import { WorkExperienceData } from '@/parts/WorkExperience';
 import Image from 'next/image';
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 interface ICompanyNameProps extends WorkExperienceData {
   selectedId: string | null;
@@ -15,6 +16,7 @@ export default function CompanyName({
   setSelectedExperienceId,
   selectedId,
 }: ICompanyNameProps) {
+  const t = useTranslations('workExperience');
 
   return (
     <li
@@ -30,7 +32,7 @@ export default function CompanyName({
             width={512}
             height={512}
             src={logo}
-            alt={`${companyName} Logo`}
+            alt={t('companyLogoAlt', { companyName })}
             className='w-12 h-12 object-contain rounded-full'
           />
         )}

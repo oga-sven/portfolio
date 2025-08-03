@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import SocialButton from '@/components/Hero/SocialButton';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations('hero');
   const age = new Date().getFullYear() - 2000 - (new Date().getMonth() < 2 ? 1 : 0);
 
   return (
@@ -14,9 +16,9 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className='text-4xl md:text-6xl font-bold'>Hi, Ik ben Sven</h2>
+        <h2 className='text-4xl md:text-6xl font-bold'>{t('greeting')}</h2>
         <p className='text-lg md:text-2xl text-twilight-400'>
-          Een {age} jarige software ontwikkelaar uit Dordrecht
+          {t.rich('description', { age })}
         </p>
         <div className='flex justify-center space-x-4'>
           <SocialButton link='https://www.linkedin.com/in/svenelmendorp/'>

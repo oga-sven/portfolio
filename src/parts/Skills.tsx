@@ -1,103 +1,119 @@
 import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
+
+// Category IDs that match translation keys
+const categoryIds = {
+  programmingLanguages: 'programmingLanguages',
+  nodeEcosystem: 'nodeEcosystem',
+  phpSymfony: 'phpSymfony',
+  rubyOnRails: 'rubyOnRails',
+  devOpsTools: 'devOpsTools',
+  databases: 'databases',
+  testingQA: 'testingQA',
+  ideCodeQuality: 'ideCodeQuality',
+  otherSkills: 'otherSkills'
+};
 
 const skills: Skill[] = [
   // Programming Languages
-  { name: 'JavaScript', category: 'Programming Languages' },
-  { name: 'TypeScript', category: 'Programming Languages' },
-  { name: 'Node.js', category: 'Programming Languages' },
-  { name: 'PHP', category: 'Programming Languages' },
-  { name: 'Ruby', category: 'Programming Languages' },
-  { name: 'Python', category: 'Programming Languages' },
+  { name: 'JavaScript', categoryId: categoryIds.programmingLanguages },
+  { name: 'TypeScript', categoryId: categoryIds.programmingLanguages },
+  { name: 'Node.js', categoryId: categoryIds.programmingLanguages },
+  { name: 'PHP', categoryId: categoryIds.programmingLanguages },
+  { name: 'Ruby', categoryId: categoryIds.programmingLanguages },
+  { name: 'Python', categoryId: categoryIds.programmingLanguages },
 
   // Node.js Ecosystem
-  { name: 'Express.js', category: 'Node.js Ecosystem' },
-  { name: 'NestJS', category: 'Node.js Ecosystem' },
-  { name: 'Prisma', category: 'Node.js Ecosystem' },
-  { name: 'Bun', category: 'Node.js Ecosystem' },
-  { name: 'Yarn', category: 'Node.js Ecosystem' },
-  { name: 'PNPM', category: 'Node.js Ecosystem' },
+  { name: 'Express.js', categoryId: categoryIds.nodeEcosystem },
+  { name: 'NestJS', categoryId: categoryIds.nodeEcosystem },
+  { name: 'Prisma', categoryId: categoryIds.nodeEcosystem },
+  { name: 'Bun', categoryId: categoryIds.nodeEcosystem },
+  { name: 'Yarn', categoryId: categoryIds.nodeEcosystem },
+  { name: 'PNPM', categoryId: categoryIds.nodeEcosystem },
 
   // PHP and Symfony
-  { name: 'Symfony', category: 'PHP/Symfony' },
-  { name: 'Laravel', category: 'PHP/Symfony' },
-  { name: 'Doctrine ORM', category: 'PHP/Symfony' },
-  { name: 'Twig', category: 'PHP/Symfony' },
-  { name: 'PHPUnit', category: 'PHP/Symfony' },
+  { name: 'Symfony', categoryId: categoryIds.phpSymfony },
+  { name: 'Laravel', categoryId: categoryIds.phpSymfony },
+  { name: 'Doctrine ORM', categoryId: categoryIds.phpSymfony },
+  { name: 'Twig', categoryId: categoryIds.phpSymfony },
+  { name: 'PHPUnit', categoryId: categoryIds.phpSymfony },
 
   // Rails and Ruby
-  { name: 'Rails', category: 'Ruby on Rails' },
-  { name: 'Active Record', category: 'Ruby on Rails' },
-  { name: 'RSpec', category: 'Ruby on Rails' },
+  { name: 'Rails', categoryId: categoryIds.rubyOnRails },
+  { name: 'Active Record', categoryId: categoryIds.rubyOnRails },
+  { name: 'RSpec', categoryId: categoryIds.rubyOnRails },
 
   // DevOps and Tools
-  { name: 'Docker', category: 'DevOps/Tools' },
-  { name: 'Kubernetes', category: 'DevOps/Tools' },
-  { name: 'GitHub Actions', category: 'DevOps/Tools' },
-  { name: 'Gitlab Pipelines', category: 'DevOps/Tools' },
-  { name: 'Sentry', category: 'DevOps/Tools' },
+  { name: 'Docker', categoryId: categoryIds.devOpsTools },
+  { name: 'Kubernetes', categoryId: categoryIds.devOpsTools },
+  { name: 'GitHub Actions', categoryId: categoryIds.devOpsTools },
+  { name: 'Gitlab Pipelines', categoryId: categoryIds.devOpsTools },
+  { name: 'Sentry', categoryId: categoryIds.devOpsTools },
 
   // Databases
-  { name: 'MySQL', category: 'Databases' },
-  { name: 'MongoDB', category: 'Databases' },
-  { name: 'Redis', category: 'Databases' },
-  { name: 'PostgreSQL', category: 'Databases' },
-  { name: 'MariaDB', category: 'Databases' },
-  { name: 'SQLite', category: 'Databases' },
+  { name: 'MySQL', categoryId: categoryIds.databases },
+  { name: 'MongoDB', categoryId: categoryIds.databases },
+  { name: 'Redis', categoryId: categoryIds.databases },
+  { name: 'PostgreSQL', categoryId: categoryIds.databases },
+  { name: 'MariaDB', categoryId: categoryIds.databases },
+  { name: 'SQLite', categoryId: categoryIds.databases },
 
   // Testing and QA
-  { name: 'Jest', category: 'Testing/QA' },
-  { name: 'Vitest', category: 'Testing/QA' },
-  { name: 'Cypress', category: 'Testing/QA' },
-  { name: 'Mocha', category: 'Testing/QA' },
-  { name: 'Chai', category: 'Testing/QA' },
-  { name: 'PHPUnit', category: 'Testing/QA' },
-  { name: 'Panther', category: 'Testing/QA' },
-  { name: 'Puppeteer', category: 'Testing/QA' },
-  { name: 'Playwright', category: 'Testing/QA' },
+  { name: 'Jest', categoryId: categoryIds.testingQA },
+  { name: 'Vitest', categoryId: categoryIds.testingQA },
+  { name: 'Cypress', categoryId: categoryIds.testingQA },
+  { name: 'Mocha', categoryId: categoryIds.testingQA },
+  { name: 'Chai', categoryId: categoryIds.testingQA },
+  { name: 'PHPUnit', categoryId: categoryIds.testingQA },
+  { name: 'Panther', categoryId: categoryIds.testingQA },
+  { name: 'Puppeteer', categoryId: categoryIds.testingQA },
+  { name: 'Playwright', categoryId: categoryIds.testingQA },
 
   // IDE/Code Quality
-  { name: 'VSCode', category: 'IDE/Code Quality' },
-  { name: 'PHPStorm', category: 'IDE/Code Quality' },
-  { name: 'Eslint', category: 'IDE/Code Quality' },
-  { name: 'Prettier', category: 'IDE/Code Quality' },
+  { name: 'VSCode', categoryId: categoryIds.ideCodeQuality },
+  { name: 'PHPStorm', categoryId: categoryIds.ideCodeQuality },
+  { name: 'Eslint', categoryId: categoryIds.ideCodeQuality },
+  { name: 'Prettier', categoryId: categoryIds.ideCodeQuality },
+  
   // Other Skills
-  { name: 'Tailwind CSS', category: 'Other Skills' },
-  { name: 'REST APIs', category: 'Other Skills' },
-  { name: 'GraphQL', category: 'Other Skills' },
-  { name: 'WebSockets', category: 'Other Skills' },
-  { name: 'SEO Optimization', category: 'Other Skills' },
-  { name: 'Team Leadership', category: 'Other Skills' },
-  { name: 'Agile Methodologies', category: 'Other Skills' },
+  { name: 'Tailwind CSS', categoryId: categoryIds.otherSkills },
+  { name: 'REST APIs', categoryId: categoryIds.otherSkills },
+  { name: 'GraphQL', categoryId: categoryIds.otherSkills },
+  { name: 'WebSockets', categoryId: categoryIds.otherSkills },
+  { name: 'SEO Optimization', categoryId: categoryIds.otherSkills },
+  { name: 'Team Leadership', categoryId: categoryIds.otherSkills },
+  { name: 'Agile Methodologies', categoryId: categoryIds.otherSkills },
 ];
 
 interface Skill {
   name: string;
-  category: string;
+  categoryId: string;
 }
 
 export default function Skills() {
-  const categories = Array.from(new Set(skills.map((skill) => skill.category)));
-  const [selectedCategory, setSelectedCategory] = useState<string>(categories[0]);
+  const t = useTranslations('skills');
+  const categoryIdsValues = Object.values(categoryIds);
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string>(categoryIdsValues[0]);
 
-  const filteredSkills = skills.filter((skill) => skill.category === selectedCategory);
+  const filteredSkills = skills.filter((skill) => skill.categoryId === selectedCategoryId);
 
   return (
     <div className='bg-twilight-900 text-white p-10'>
-      <h2 className='text-2xl font-bold mb-4'>Skills</h2>
+      <h2 className='text-2xl font-bold mb-4'>{t('title')}</h2>
 
       {/* Category Tabs */}
       <div className='flex space-x-4 mb-6 overflow-x-auto'>
-        {categories.map((category) => (
+        {categoryIdsValues.map((categoryId) => (
           <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
+            key={categoryId}
+            onClick={() => setSelectedCategoryId(categoryId)}
             className={`px-4 py-2 rounded-lg text-sm font-semibold ${
-              selectedCategory === category
+              selectedCategoryId === categoryId
                 ? 'bg-twilight-700 text-white'
                 : 'bg-gray-800 text-gray-400 hover:bg-twilight-800'
             }`}
           >
-            {category}
+            {t(`categories.${categoryId}`)}
           </button>
         ))}
       </div>
