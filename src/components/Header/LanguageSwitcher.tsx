@@ -30,18 +30,22 @@ export default function LanguageSwitcher({ className = '' }: LanguageSwitcherPro
     <div className={`flex items-center space-x-2 ${className}`}>
       <button
         onClick={() => switchLanguage('nl')}
-        className={`px-2 py-1 rounded ${
-          currentLocale === 'nl' ? 'font-bold text-twilight-400' : 'text-twilight-600'
+        className={`px-2 py-1 rounded transition-colors ${
+          currentLocale === 'nl' 
+            ? 'font-bold text-light-accent dark:text-dark-accent' 
+            : 'text-light-foreground/60 dark:text-dark-foreground/60 hover:text-light-foreground dark:hover:text-dark-foreground'
         }`}
         aria-label="Switch to Dutch"
       >
         {t('nl')}
       </button>
-      <span className="text-twilight-600">|</span>
+      <span className="text-light-border dark:text-dark-border">|</span>
       <button
         onClick={() => switchLanguage('en')}
-        className={`px-2 py-1 rounded ${
-          currentLocale === 'en' ? 'font-bold text-twilight-400' : 'text-twilight-600'
+        className={`px-2 py-1 rounded transition-colors ${
+          currentLocale === 'en' 
+            ? 'font-bold text-light-accent dark:text-dark-accent' 
+            : 'text-light-foreground/60 dark:text-dark-foreground/60 hover:text-light-foreground dark:hover:text-dark-foreground'
         }`}
         aria-label="Switch to English"
       >

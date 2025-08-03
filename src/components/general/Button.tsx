@@ -8,7 +8,7 @@ interface IButtonProps extends PropsWithChildren<React.InputHTMLAttributes<HTMLB
 export default function Button({ children, ...props }: IButtonProps) {
   return (
     <button
-      className='bg-twilight-500 hover:bg-twilight-400 text-white py-2 px-6 rounded-lg w-full'
+      className='bg-light-secondary dark:bg-dark-secondary hover:bg-light-primary dark:hover:bg-dark-primary text-white py-2 px-6 rounded-lg w-full transition-colors'
       {...props}
     >
       {children}

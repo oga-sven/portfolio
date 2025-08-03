@@ -18,7 +18,7 @@ interface PortfolioPageProps {
 // as they're already being handled by NextIntlClientProvider in _app.tsx
 const PortfolioPage: NextPage<PortfolioPageProps> = () => {
   return (
-    <div className='bg-twilight-950 text-white min-h-screen flex flex-col'>
+    <div className='bg-light-background dark:bg-twilight-950 text-light-foreground dark:text-white min-h-screen flex flex-col transition-colors'>
       <Header />
       <Hero />
       <WorkExperience />
@@ -32,7 +32,6 @@ const PortfolioPage: NextPage<PortfolioPageProps> = () => {
 
 export const getStaticProps: GetStaticProps = async ({ locale: requestedLocale }) => {
   // Get locale from request or use default
-  console.log('requestedLocale: ', requestedLocale || 'default')
   const locale = requestedLocale || defaultLocale;
   
   // Load messages for the locale

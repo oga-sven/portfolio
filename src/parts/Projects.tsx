@@ -47,7 +47,7 @@ export default function Projects(): JSX.Element {
         {projects.map(({ id, fileName, link, tags }) => (
           <div
             key={fileName}
-            className='bg-twilight-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col'
+            className='bg-white dark:bg-twilight-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col border border-light-border dark:border-transparent'
           >
             <Image
               width={1080 / 3}
@@ -68,7 +68,7 @@ export default function Projects(): JSX.Element {
                     {tags.map((tag) => (
                       <span
                         key={tag}
-                        className='bg-gray-700 text-gray-300 text-xs font-medium px-2 py-1 rounded-full'
+                        className='bg-light-muted dark:bg-gray-700 text-light-foreground/70 dark:text-gray-300 text-xs font-medium px-2 py-1 rounded-full transition-colors'
                       >
                         {tag}
                       </span>
@@ -77,7 +77,7 @@ export default function Projects(): JSX.Element {
                 )}
                 <a
                   href={link}
-                  className='text-blue-500 hover:underline mt-4 inline-flex items-center'
+                  className='text-light-primary dark:text-dark-primary hover:text-light-hover dark:hover:text-dark-hover mt-4 inline-flex items-center transition-colors'
                 >
                   {t('viewProject')} <FaExternalLinkAlt className='ml-2' />
                 </a>

@@ -98,7 +98,7 @@ export default function Skills() {
   const filteredSkills = skills.filter((skill) => skill.categoryId === selectedCategoryId);
 
   return (
-    <div className='bg-twilight-900 text-white p-10'>
+    <div className='bg-light-muted dark:bg-twilight-900 text-light-foreground dark:text-white p-10 transition-colors'>
       <h2 className='text-2xl font-bold mb-4'>{t('title')}</h2>
 
       {/* Category Tabs */}
@@ -107,10 +107,10 @@ export default function Skills() {
           <button
             key={categoryId}
             onClick={() => setSelectedCategoryId(categoryId)}
-            className={`px-4 py-2 rounded-lg text-sm font-semibold ${
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
               selectedCategoryId === categoryId
-                ? 'bg-twilight-700 text-white'
-                : 'bg-gray-800 text-gray-400 hover:bg-twilight-800'
+                ? 'bg-light-primary dark:bg-twilight-700 text-white'
+                : 'bg-light-border dark:bg-gray-800 text-light-foreground/70 dark:text-gray-400 hover:bg-light-muted dark:hover:bg-twilight-800'
             }`}
           >
             {t(`categories.${categoryId}`)}
@@ -123,7 +123,7 @@ export default function Skills() {
         {filteredSkills.map((skill) => (
           <div
             key={skill.name}
-            className='bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center text-sm font-medium hover:bg-twilight-700'
+            className='bg-white dark:bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center text-sm font-medium hover:bg-light-muted dark:hover:bg-twilight-700 border border-light-border dark:border-transparent transition-colors'
           >
             <p>{skill.name}</p>
           </div>

@@ -4,7 +4,7 @@ export default function TextField(props: React.InputHTMLAttributes<HTMLInputElem
   return (
     <input
       type='text'
-      className='w-full bg-twilight-800 text-twilight-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none'
+      className='w-full bg-light-muted dark:bg-twilight-800 text-light-foreground dark:text-twilight-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-light-primary dark:focus:ring-dark-primary outline-none border border-light-border dark:border-transparent transition-colors'
       {...props}
     />
   );

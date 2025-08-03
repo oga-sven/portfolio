@@ -21,8 +21,8 @@ export default function CompanyName({
   return (
     <li
       key={id}
-      className={`cursor-pointer p-4 rounded-lg hover:bg-twilight-800 transition-colors ${
-        selectedId === id ? 'font-semibold italic' : ''
+      className={`cursor-pointer p-4 rounded-lg hover:bg-light-muted dark:hover:bg-twilight-800 transition-colors ${
+        selectedId === id ? 'font-semibold italic bg-light-muted dark:bg-twilight-800' : ''
       }`}
       onClick={() => setSelectedExperienceId(id)}
     >
@@ -38,7 +38,7 @@ export default function CompanyName({
         )}
         <div>
           <p className='font-semibold text-lg'>{companyName}</p>
-          <p className='text-sm text-gray-300'>{role}</p>
+          <p className='text-sm text-light-foreground/60 dark:text-gray-300'>{role}</p>
         </div>
       </div>
     </li>

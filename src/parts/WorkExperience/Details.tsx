@@ -27,16 +27,16 @@ export default function Details({ selectedExperience }: IDetailsProps): JSX.Elem
   };
 
   return (
-    <main className='w-full md:w-2/3 p-6 md:p-10 bg-gray-800 md:rounded-l-lg'>
+    <main className='w-full md:w-2/3 p-6 md:p-10 bg-light-muted dark:bg-gray-800 md:rounded-l-lg transition-colors'>
       {selectedExperience ? (
         <div>
           <h2 className='text-2xl md:text-3xl font-bold mb-4'>
             {t(`companies.${selectedExperience.id}.name`)}
           </h2>
-          <p className='text-twilight-200 font-medium text-lg mb-2'>
+          <p className='text-light-primary dark:text-twilight-200 font-medium text-lg mb-2'>
             {t(`companies.${selectedExperience.id}.role`)}
           </p>
-          <p className='text-gray-400 text-sm mb-6'>
+          <p className='text-light-foreground/60 dark:text-gray-400 text-sm mb-6'>
             {t(`companies.${selectedExperience.id}.duration`)}
           </p>
           <div className='mb-6'>{description()}</div>
@@ -45,7 +45,7 @@ export default function Details({ selectedExperience }: IDetailsProps): JSX.Elem
               href={selectedExperience.link}
               target='_blank'
               rel='noopener noreferrer'
-              className='text-blue-500 hover:underline'
+              className='text-light-primary dark:text-dark-primary hover:text-light-hover dark:hover:text-dark-hover hover:underline transition-colors'
             >
               {t('visitWebsite')}
             </a>

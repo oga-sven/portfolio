@@ -5,12 +5,13 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { loadMessages, defaultLocale } from '@/utils/i18n';
+import { ThemeProvider } from '@/utils/ThemeProvider';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [messages, setMessages] = useState(pageProps.messages || {});
   const [locale, setLocale] = useState(pageProps.locale || defaultLocale);
-  console.log(123);
+  
   // Load messages on client side
   useEffect(() => {
     const loadLocaleMessages = async () => {
@@ -40,8 +41,10 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router.query]);
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <Component {...pageProps} />
-    </NextIntlClientProvider>
+    <ThemeProvider>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <Component {...pageProps} />
+      </NextIntlClientProvider>
+    </ThemeProvider>
   );
 }

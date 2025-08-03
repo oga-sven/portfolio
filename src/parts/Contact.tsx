@@ -48,7 +48,7 @@ export default function Contact() {
       <h2 className='text-3xl font-bold text-center mb-8'>{t('title')}</h2>
 
       {success ? (
-        <p className='text-center text-green-600 text-lg'>
+        <p className='text-center text-green-600 dark:text-green-400 text-lg transition-colors'>
           {t('successMessage')}
         </p>
       ) : (
@@ -64,7 +64,7 @@ export default function Contact() {
                 placeholder={t('nameLabel')}
                 {...register('name', { required: t('nameError') })}
               />
-              {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
+              {errors.name && <p className='text-red-600 dark:text-red-400 transition-colors'>{errors.name.message}</p>}
 
               <TextField
                 placeholder={t('emailLabel')}
@@ -76,16 +76,16 @@ export default function Contact() {
                   },
                 })}
               />
-              {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
+              {errors.email && <p className='text-red-600 dark:text-red-400 transition-colors'>{errors.email.message}</p>}
 
               <TextArea
                 placeholder={t('messageLabel')}
                 rows={5}
                 {...register('message', { required: t('messageError') })}
               />
-              {errors.message && <p className='text-red-500'>{errors.message.message}</p>}
+              {errors.message && <p className='text-red-600 dark:text-red-400 transition-colors'>{errors.message.message}</p>}
 
-              {error && <p className='text-red-500'>{error}</p>}
+              {error && <p className='text-red-600 dark:text-red-400 transition-colors'>{error}</p>}
 
               <Button type='submit'>{t('submitButton')}</Button>
             </>

@@ -17,7 +17,7 @@ export default function Hero() {
         transition={{ duration: 1 }}
       >
         <h2 className='text-4xl md:text-6xl font-bold'>{t('greeting')}</h2>
-        <p className='text-lg md:text-2xl text-twilight-400'>
+        <p className='text-lg md:text-2xl text-light-primary dark:text-twilight-400 transition-colors'>
           {t.rich('description', { age })}
         </p>
         <div className='flex justify-center space-x-4'>

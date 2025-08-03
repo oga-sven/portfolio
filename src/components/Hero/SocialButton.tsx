@@ -9,7 +9,7 @@ export default function SocialButton({ link, children }: PropsWithChildren<ISoci
     <a
       href={link}
       target='_blank'
-      className='text-blue-500 hover:text-blue-400 text-2xl'
+      className='text-light-primary dark:text-dark-primary hover:text-light-hover dark:hover:text-dark-hover text-2xl transition-colors'
       rel='noopener noreferrer'
     >
       {children}

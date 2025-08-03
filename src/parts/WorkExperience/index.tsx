@@ -35,7 +35,7 @@ export function WorkExperiencePage(): JSX.Element {
     experiences.find((experience) => experience.id === selectedExperienceID) ?? experiences[0];
 
   return (
-    <div className='text-twilight-50 min-h-96 flex flex-col md:flex-row my-12'>
+    <div className='text-light-foreground dark:text-twilight-50 min-h-96 flex flex-col md:flex-row my-12'>
       <aside className='w-full md:w-1/3 p-6 overflow-y-auto'>
         <h2 className='text-2xl font-bold mb-6'>{t('title')}</h2>
         <ul className='space-y-4'>
